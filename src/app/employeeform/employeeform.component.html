@@ -1,0 +1,38 @@
+
+<h2>Employee Form </h2>
+
+  <form class="custom-form" #myForm="ngForm" (ngSubmit)="submitForm()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" name="name" required [(ngModel)]="formData.name" #name="ngModel">
+      <small class="text-danger" [class.d-none]="name.valid || name.untouched">
+        Enter a valid name
+      </small>
+    </div>
+    <div class="mb-3">
+      <label for="designation" class="form-label">Designation</label>
+      <input type="text" class="form-control" id="designation" name="designation" required [(ngModel)]="formData.designation" #designation="ngModel">
+      <small class="text-danger" [class.d-none]="designation.valid || designation.untouched">
+        Enter a valid designation
+      </small>
+    </div>
+    
+    <div class="mb-3">
+      <label for="location" class="form-label">Location</label>
+      <input type="text" class="form-control" id="location" name="location" required [(ngModel)]="formData.location" #location="ngModel">
+      <small class="text-danger" [class.d-none]="location.valid || location.untouched">
+        Location is required.
+      </small>
+    </div>
+    
+    <div class="mb-3">
+      <label for="salary" class="form-label">Salary</label>
+      <input type="number" class="form-control" id="salary" name="salary" required [(ngModel)]="formData.salary" #salary="ngModel">
+      <small class="text-danger" [class.d-none]="salary.valid || salary.untouched">
+        Salary is required.
+      </small>
+    </div>
+    
+    <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">Submit</button>
+  </form>
+  

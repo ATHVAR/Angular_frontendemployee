@@ -1,0 +1,43 @@
+/* CSS styles for the table */
+h3{
+    text-align: center;
+    padding-top: 2%;
+    color: blue;
+}
+.table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-left: 11%;
+    margin-top: 10px;
+    /* margin: 25px; */
+    border: 2px solid blueviolet; /* Add outer border to the table */
+  }
+  
+  .table th,
+  .table td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid blueviolet;
+  }
+  
+  .table th {
+    background-color:antiquewhite;
+    font-weight: bold;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid blue;
+    padding: 10px; /* Add padding to the table cells */
+  }
+.table th.ID{width:20px}
+.table.td.ID{width: 20px;}
+  
+.table th.Email{width:20px}
+.table.td.Email{width: 20px;} 
+.table th.Name{width:20px}
+.table.td.Name{width: 20px;} 
